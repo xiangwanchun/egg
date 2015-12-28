@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>砸金蛋</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8;" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="skin/main.css" media="all">
+    <link rel="stylesheet" type="text/css" href="skin/css/reset.css" media="all">
+    <link rel="stylesheet" type="text/css" href="skin/css/main.css" media="all">
+    <link rel="stylesheet" type="text/css" href="skin/css/dialog.css" media="all">
+    <script type="text/javascript">
+        var pagebakc = "";
+        var isWeixin = false,
+            line_map = "";
+    </script>
+    <script type="text/javascript">
+        var ua = navigator.userAgent.toLowerCase();
+        function is_weixin() {
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                isWeixin = true;
+            } else {
+                isWeixin = false;
+            }
+        }
+        is_weixin();
+    </script>
+</head>
+
+<body style = "background: #f88b39;"> 
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/showalert.js"></script>
+    <link href="skin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/dialog_min.js"></script>
+    <script type="text/javascript" src="js/player_min.js"></script>
+   <script type="text/javascript" src="js/lottery.js"></script>
+    <div class="wrap_out">
+        <div class="wrap" name="nodata">
+        <div class="body pb_10">
+            
+            <section class="stage">
+            <div style="color:#fff; font-size:18px; position:absolute; left:0px; top:90%; z-index:999;width:100%">
+            <!--<div style="width:120px; margin-left:auto;margin-right:auto;">还有 <span id="winTimes">10</span> 次机会</div>-->
+            </div>
+            
+            <div  id="divTips" style="color:#fff; font-size:22px; position:absolute; left:0px; top:40%; z-index:999;width:100%; display:none">
+            <div style="width:309px;height:156px;margin-left:auto;margin-right:auto; background:url(skin/images/box_bg.png) no-repeat 0 0;color:#666666; font-size:18px; ">
+                <div style="background:url(skin/images/party.png) no-repeat 0 0; width:121px; height:124px; position:absolute; margin-left:20px"></div>
+                <a href="javascript:closeDiv();"><div style=" float:right; padding-top:30px; padding-right:20px; height:30px; width:30px"></div></a>
+                <div style=" padding-left:120px; padding-top:50px;padding-right:20px">该活动已结束</div>
+                <div style=" padding-top:20px; text-align:center"><a href="javascript:closeDiv()"><img src="skin/images/button_other.png" /></a></div>
+            </div>
+            </div>
+            
+            
+            <div id="divNoWin" style="color:#fff; font-size:22px; position:absolute; left:0px; top:40%; z-index:999;width:100%; display:none">
+            <div style="width:309px;height:156px;margin-left:auto;margin-right:auto; background:url(skin/images/box_bg.png) no-repeat 0 0;color:#666666; font-size:14px; ">
+                <div style="background:url(skin/images/cry.png) no-repeat 0 0; width:121px; height:124px; position:absolute; margin-left:20px"></div>
+                <a href="javascript:closeDiv();"><div style=" float:right; padding-top:30px; padding-right:20px; height:30px; width:30px"></div></a>
+                <div style=" padding-left:120px; padding-top:50px;padding-right:20px">对不起，您没中奖！</br>您还有 <span id='winTimes1' style="color:#f88b39">2</span> 次机会</div>
+            </div>
+            </div>
+            
+            
+            <div id="divWin" style="color:#fff; font-size:22px; position:absolute; left:0px; top:40%; z-index:999;width:100%;display:none">
+            <div style="width:309px;height:220px;margin-left:auto;margin-right:auto; background:url(skin/images/box_bg2.png) no-repeat 0 0;color:#666666; font-size:14px; ">
+                <div style="background:url(skin/images/gongxi.png) no-repeat 0 0; width:121px; height:124px; position:absolute; margin-left:20px"></div>
+                <a href="javascript:closeDiv();"><div style=" float:right; padding-top:30px; padding-right:20px; height:30px; width:30px"></div></a>
+                <div style=" padding-left:20px; padding-top:70px; padding-right:20px">  获得了“砸金蛋”游戏 <span id='winContent' style="color:#f88b39">XX奖品</span></div>
+                <div style=" padding-top:10px; text-align:center"><a id="accept_button" href="sobey://game/prize"><img src="skin/images/button_get.png" /></a></div>
+            </div>
+            </div>
+            
+            
+            <div id="divNoChance" style="color:#fff; font-size:22px; position:absolute; left:0px; top:40%; z-index:999999;width:100%; display:none">
+            <div style="width:309px;height:156px;margin-left:auto;margin-right:auto; background:url(skin/images/box_bg.png) no-repeat 0 0;color:#666666; font-size:14px; ">
+                <div style="background:url(skin/images/cry.png) no-repeat 0 0; width:121px; height:124px; position:absolute; margin-left:20px"></div>
+                <a href="javascript:closeDiv();"><div style=" float:right; padding-top:30px; padding-right:20px; height:30px; width:30px"></div></a>
+                <div style=" padding-left:120px; padding-top:50px;padding-right:20px">对不起，您已经没有机会了!</div>
+                <!--<div style=" padding-top:10px; text-align:center"><a href="sobey://share/app"><img src="skin/images/button_fx.png" /></a></div>-->
+            </div>
+            </div>
+            
+            
+                <img src="skin/images/stage.jpg">
+                <div id="shape" class="cube on" style="cursor:pointer;">
+                    <div class="plane one"><span><figure>&nbsp;</figure></span>
+                    </div>
+                    <div class="plane two"><span><figure>&nbsp;</figure></span>
+                    </div>
+                    <div class="plane three"><span><figure>&nbsp;</figure></span>
+                    </div>
+                </div>
+                <div id="hit" class="hit">
+                    <img src="skin/images/egg_c.png">                </div>
+          </section>
+            <section></section>
+            
+          
+            
+        </div>
+
+
+        <div style="color:#fff; font-size:22px; font-weight:bold; margin-left:15px">奖项设置</div>
+        <div class="lottery_txt_out">
+        <div class="lottery_txt">
+            <div>
+                
+            </div>
+        </div>
+        </div>
+        
+        <!-- 中奖名单 --> 
+        <div style="color:#fff; font-size:22px; font-weight:bold; margin-left:15px">中奖名单</div>
+        <div class="lottery_txt_out">
+        <div class="lottery_txt">
+        
+            <div>
+             <div id="luckyUsers">
+             <marquee direction='up' behavior='scroll' width="280" height="180" loop=3 scrollamount=1 scrolldelay=10 onmouseover='this.stop()' onmouseout='this.start()'>
+              <p style="color:#fff; font-size:16px">恭喜用户：成功领取了</p>
+
+             </marquee>                 
+            </div>
+            </div>
+        </div>
+        </div><!-- 中奖名单 End --> 
+
+
+
+
+
+
+        </div>
+
+    </div>
+<div style="display:none;">
+    <input name="uid" type="hidden"/>
+    <input name="token" type="hidden"/>
+    <input name="gid" type="hidden"/>
+    <input name="source" type="hidden"/>
+    <input name="activityId" type="hidden"/>
+</div>
+
+<script type="text/javascript">
+  //检查信息
+  function ckInfo(){
+        $.ajax({
+            url:'ajax.php?action=check&uid=1',
+            dataType:'json',
+            type: 'POST',
+            success:function(obj){
+                if(obj.stat == "-1"){
+                    myalert('用户信息读取失败，请重新进入抽奖活动');
+                    return;
+                }
+                if(obj.stat == "0"){
+                    $("#winTimes").html(obj.score);
+                    $("#winTimes1").html(obj.score);
+                }
+            }
+        })
+  }
+</script>   
+
+</body>
+
+</html>

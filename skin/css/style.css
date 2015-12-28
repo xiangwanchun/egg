@@ -1,0 +1,30 @@
+/**/
+.wrap{ margin:0 auto; position:relative; min-width:320px;padding-bottom: 22px;}
+.wrap_inner{ width:auto;}
+.message_box_index{ padding:20px 19px 25px;}
+.message_box_index input{ border:none; border-bottom:1px solid #fff; background:none; width:200px; height:20px; padding:2px; line-height:20px; color:#fff;}
+.message_box_index ::-webkit-input-placeholder {color: #fff;}
+.message_box_index a{ float:right; display:block; border:1px solid #fff; width:60px; height:24px; text-align:center; color:#fff; font-size:16px;}
+
+.hand{cursor:not-allowed;}
+.none{ display:none;}
+
+.lottery{ background:#810209;}
+.lottery_flash{ width:260px; position:relative; margin:0 auto; padding:10px;}
+.lottery_txt_out{ border-radius:8px; margin:10px 10px 20px 10px; -webkit-box-sizing: content-box;border:2px dashed #fcd1b0}
+.lottery_txt{ background:#f9a261; border-radius:8px; margin:3px; padding: 10px; -webkit-box-sizing: content-box}
+#lottery_txt_box {border: 1px dashed rgb(137,137,137);border-radius: 4px;}
+.lottery_txtend{margin:10px;}
+.lottery_txt h2{ font-size: 14px; padding: 0 0 0 10px; color:#FFF; margin:-1px 0 8px -1px; line-height: 22px;background: url("../images/title_bg.png") no-repeat center left;-webkit-background-size:110px 22px;}
+.lottery_txt p{ margin: 0 10px 6px 10px;}
+.lottery_txt p:first-of-type p{ margin: 0;}
+.color_y{ color:#ff4600;}
+.color_g{ color:#B1B1AA;}
+
+.draw{width:260px; height:260px; position:relative;margin: 12px auto;} 
+#disk{width:260px; height:260px; background: no-repeat} 
+#start{width:160px; height:160px; position:absolute; top:50px; left:50px;} 
+#start img{cursor: pointer;width:160px; height:160px;} 
+
+#copyright{height: 22px;color:#FFFFFF;width: 100%;text-align:center;background-color:#727171;line-height: 22px;font-size: 12px;margin-top:-22px}
+#copyright a{color:#FFFFFF;}
