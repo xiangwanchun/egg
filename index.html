@@ -58,20 +58,25 @@
             
             
             <div id="divNoWin" style="color:#fff; font-size:22px; position:absolute; left:0px; top:40%; z-index:999;width:100%; display:none">
-            <div style="width:309px;height:156px;margin-left:auto;margin-right:auto; background:url(skin/images/box_bg.png) no-repeat 0 0;color:#666666; font-size:14px; ">
-                <div style="background:url(skin/images/cry.png) no-repeat 0 0; width:121px; height:124px; position:absolute; margin-left:20px"></div>
+            <div style="width:309px;height:220px;margin-left:auto;margin-right:auto; background:url(skin/images/nowin.png) no-repeat 0 0;color:#666666; font-size:14px; ">             
                 <a href="javascript:closeDiv();"><div style=" float:right; padding-top:30px; padding-right:20px; height:30px; width:30px"></div></a>
-                <div style=" padding-left:120px; padding-top:50px;padding-right:20px">对不起，您没中奖！</br>您还有 <span id='winTimes1' style="color:#f88b39">2</span> 次机会</div>
+                <div style="padding:90px 80px 0; font-size:16px;color:#858585;line-height: 26px;text-align: center;font-family: 微软雅黑;">对不起，您没中奖！</br>您还有 <span id='winTimes1' style="color:#f88b39">2</span> 次机会</div>
+                <div style=" padding-top:10px; text-align:center"><a id="accept_button" href="sobey://game/prize" style="display:block;width:120px;height:38px;margin:0 auto;"><img src="skin/images/OnceAgain.png" style="width:100%;height:100%"></a></div>
             </div>
             </div>
             
             
             <div id="divWin" style="color:#fff; font-size:22px; position:absolute; left:0px; top:40%; z-index:999;width:100%;display:none">
-            <div style="width:309px;height:220px;margin-left:auto;margin-right:auto; background:url(skin/images/box_bg2.png) no-repeat 0 0;color:#666666; font-size:14px; ">
-                <div style="background:url(skin/images/gongxi.png) no-repeat 0 0; width:121px; height:124px; position:absolute; margin-left:20px"></div>
+            <div style="width:309px;height:287px;margin-left:auto;margin-right:auto; background:url(skin/images/win.png) no-repeat 0 0;color:#666666; font-size:14px; ">               
                 <a href="javascript:closeDiv();"><div style=" float:right; padding-top:30px; padding-right:20px; height:30px; width:30px"></div></a>
-                <div style=" padding-left:20px; padding-top:70px; padding-right:20px">  获得了“砸金蛋”游戏 <span id='winContent' style="color:#f88b39">XX奖品</span></div>
-                <div style=" padding-top:10px; text-align:center"><a id="accept_button" href="sobey://game/prize"><img src="skin/images/button_get.png" /></a></div>
+                <div style="padding:90px 20px 15px; font-size:16px;color:#858585;line-height: 26px;font-family: 微软雅黑;"> 恭喜您获得了“砸金蛋”游戏 <span id='winContent' style="color:#f88b39">一等奖(iPhone6s一台)</span></div>
+                <div>
+                 <span class="prizeImg" style="display:inline-block;margin-left:20px;width:110px;height:110px;"><img src='skin/images/prize.jpg' style='width:100%;height:100%'></span>
+                 <div style=" float:right;margin-right:40px;">
+                     <div style="padding-top:5px; text-align:center"><a id="accept_button" href="sobey://game/prize" style="display:block;width:120px;height:38px;"><img src="skin/images/getprize.png" style="width:100%;height:100%"></a></div>
+                     <div style="padding-top:25px; text-align:center"><a id="accept_button" href="sobey://game/prize" style="display:block;width:120px;height:38px;"><img src="skin/images/OnceAgain.png" style="width:100%;height:100%"></a></div>
+                 </div>             
+                </div>
             </div>
             </div>
             
@@ -114,21 +119,21 @@
         </div>
         </div>
         
-        <!-- 中奖名单 --> 
-        <div style="color:#fff; font-size:22px; font-weight:bold; margin-left:15px">中奖名单</div>
+        <!-- 奖项说明 --> 
+        <div style="color:#fff; font-size:22px; font-weight:bold; margin-left:15px">奖项说明</div>
         <div class="lottery_txt_out">
         <div class="lottery_txt">
         
             <div>
-             <div id="luckyUsers">
-             <marquee direction='up' behavior='scroll' width="280" height="180" loop=3 scrollamount=1 scrolldelay=10 onmouseover='this.stop()' onmouseout='this.start()'>
-              <p style="color:#fff; font-size:16px">恭喜用户：成功领取了</p>
-
-             </marquee>                 
-            </div>
+             <p style="line-height:22px;color:#fff;font-family: '微软雅黑';">
+                特等奖：iPhone6S 一部 价值6088<br>
+                一等奖：iPad mini2 一部 价值2088<br>
+                二等奖：亚马逊Kindle Paperwhite2 一部 价值899<br>
+                三等奖: 飞科剃须刀 一部 价值399<br>
+             </p>
             </div>
         </div>
-        </div><!-- 中奖名单 End --> 
+        </div><!-- 奖项说明 End --> 
 
 
 
